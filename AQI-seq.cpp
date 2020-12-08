@@ -32,9 +32,10 @@ using namespace std;
 //      Output: The calculated value of f(x).
 // ------------------------------------------------------------------
 float function(float x) {
-  return 2 * (sqrt((pow(x, 2) + (2*x) + 3))); // f(x) = 2 * √(x^2 + 2x + 3)
-  // return log((50 * pow(x, 3)) + (4 * pow(x, 2))); // f(x) = ln(50x^3 + 4x^2)
-  // return fabs(((3 * cos(x))/(sin(3))) + (x / 2)); // f(x) = |(3 * cos(x))/(sin(3))) + (x / 2)|
+  // return 0.005 * pow(x, 2);                         // f(x) = 1/200x^2
+  // return (0.25 * x) + 4;                            // f(x) = 1/4x + 4
+  // return fabs(20 * cos(x)) / 4;                     // f(x) = | 20cos(x) |/4
+  return fabs( (5 * x) * ( cos(6*x) * sin(x) ) / 20;  // f(x) = | 5x( (cos(6x) + sin(x) ) | / 20
 
   // f(x) = |10 * ( cos(x^x) / (2 ^ ((x^x - pi/2) / 5))) + 4 |
 }
@@ -149,7 +150,7 @@ int main(int argc, char *argv[]) {
   printf("##################################\n");
   printf(" Adaptive Quadrature Integration: \n");
   printf("##################################\n");
-  printf(" • Integral: ∫ %s dx \n", "|(3 * cos(x))/(sin(3))) + (x / 2)|");
+  printf(" • Integral: ∫ %s dx \n", "<copy function here>");
   printf(" •   Bounds: %4.2f, %4.2f \n", lower, upper);
   printf(" •    Error: %4.2f \n", error);
   printf(" •      AQI: %4.2f \n", adaptive_quadrature(lower, upper, error));
