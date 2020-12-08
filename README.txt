@@ -1,4 +1,11 @@
 ########################################################################################
+D E S C R I P T I O N :
+########################################################################################
+The files included are different implementations for Adaptive Quadrature Integration.
+Each is designed with a different method in mind. AQI-seq.cpp is our sequential version,
+AQI-omp.cpp is our OpenMP version, and AQI-mpi.cpp is our MPI version.
+
+########################################################################################
 H O W   T O   R U N :
 ########################################################################################
 C O M P I L E :

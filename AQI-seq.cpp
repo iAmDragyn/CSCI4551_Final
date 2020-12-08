@@ -23,6 +23,8 @@
 
 using namespace std;
 
+#define PI 3.1415965
+
 // F U N C T I O N :
 // ------------------------------------------------------------------
 // Description: Contains hardcoded f(x); the desired equation to
@@ -32,10 +34,10 @@ using namespace std;
 //      Output: The calculated value of f(x).
 // ------------------------------------------------------------------
 float function(float x) {
-  // return 0.005 * pow(x, 2);                         // f(x) = 1/200x^2
-  // return (0.25 * x) + 4;                            // f(x) = 1/4x + 4
-  // return fabs(20 * cos(x)) / 4;                     // f(x) = | 20cos(x) |/4
-  return fabs( (5 * x) * ( cos(6*x) * sin(x) ) ) / 20;  // f(x) = | 5x( (cos(6x) + sin(x) ) | / 20
+  // return 0.005 * pow(x, 2);                                            // f(x) = 1/200x^2
+  // return (0.25 * x) + 4;                                               // f(x) = 1/4x + 4
+  return fabs(20 * cos(x)) / 4;                                        // f(x) = | 20cos(x) |/4
+  // return fabs( (5 * x) * ( cos(6*(x*PI/180)) * sin((x*PI/180)) ) ) / 20;  // f(x) = | 5x( (cos(6x) + sin(x) ) | / 20
 
   // f(x) = |10 * ( cos(x^x) / (2 ^ ((x^x - pi/2) / 5))) + 4 |
 }
